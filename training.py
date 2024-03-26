@@ -9,11 +9,13 @@ import argparse
 parser = argparse.ArgumentParser(description='This is a demonstration program')
 
 # Here we add an argument to the parser, specifying the expected type, a help message, etc.
+# 在这里我们向解析器添加一个参数，指定预期类型、帮助消息等。
 parser.add_argument('-batch_size', type=str, required=True, help='Please provide a batch_size')
 
 args = parser.parse_args()
 
 # Now we can use the argument value in our program.
+# 现在我们可以在程序中使用参数值。
 print(f'batch size: {args.batch_size}')
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
