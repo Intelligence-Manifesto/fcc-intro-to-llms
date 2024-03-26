@@ -15,6 +15,7 @@ def process_file(args):
     return characters
 
 def xz_files_in_dir(directory):
+    # os.path.join(directory, filename): 这个函数用于跨操作系统地将目录名和文件名合并成一个完整的路径。os.path.isfile(path)返回一个布尔值
     return [filename for filename in os.listdir(directory) if filename.endswith(".xz") and os.path.isfile(os.path.join(directory, filename))]
 
 def process_files_in_parallel(files, folder_path, output_file):
